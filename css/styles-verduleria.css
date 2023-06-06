@@ -1,0 +1,654 @@
+/* estilos generales */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+
+/* utilidades */
+
+.line{
+    height: 6px;
+    width: 30%;
+    background: #2A8C0F;
+    display: inline-block;
+}
+
+.promo{
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+.promo-blanca{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.productos img{
+    transition: .6s !important;
+}
+
+.productos img:hover{
+    transform: scale(1.2) !important;
+}
+
+.otrosProductos img{
+    transition: .6s !important;
+}
+
+.otrosProductos img:hover{
+    transform: scale(1.2) !important;
+}
+
+/* ESTILOS DE LOADER */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+  }
+  #loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  #loader-wrapper .loader-section.section-left {
+    left: 0;
+  }
+  #loader-wrapper .loader-section.section-right {
+    right: 0;
+  }
+  #loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+    z-index: 99999;
+  }
+  #loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+    -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+  }
+  #loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+    -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+  }
+  .loaded #loader-wrapper {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all 0.3s 1s ease-out;
+    transition: all 0.3s 1s ease-out;
+  }
+  .loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+/* todo ETILOS DEL SCROLLTOP */
+
+.totop {
+    background: #e65609;
+    position: fixed;
+    bottom: 40px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+    z-index: 100;
+}
+
+.totop.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+}
+
+/* ESTILOS DEL MENU */
+
+.nav-item a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 15px;
+    transition: all 0.4s;
+}
+
+.nav-item a:hover{
+    color: #2A8C0F;
+}
+
+.navbar-brand{
+    height: 50px;
+    width: 100px;
+}
+
+.search{
+    height: 45px;
+    outline: none;
+    border: 2px solid #2A8C0F;
+    background-color: transparent;
+    border-radius: 20px 0px 0px 20px;
+    border-right: none;
+    box-shadow: none;
+}
+
+.btn1{
+    height: 45px;
+    outline: none;
+    border: none;
+    background-color: #2A8C0F;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    transition: all 0.4s;
+}
+
+.btn1:hover{
+    background-color: #1e630b;
+}
+
+.bi-bag-check{
+    font-size: 30px;
+    color: #e65609;
+    cursor: pointer;
+    padding-top: 5px;
+    transition: all 0.4s;
+}
+
+.bi-bag-check:hover{
+    color: #2A8C0F;
+}
+
+.navbar-toggler{
+    font-size: 20px;
+    border: none;
+}
+
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+/* AQUI COMIENZA LOS ESTILOS DE MAIN */
+
+.main{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/imagenes/main-frutas.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main h1{
+    font-size: 5rem;
+    color: white;
+}
+
+.main p:nth-child(1){
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.main p{
+    font-size: 18px;
+    color: white;
+}
+
+
+
+.mbtn1{
+    outline: none;
+    height: 50px;
+    width: 25%;
+    border: none;
+    color: white;
+    background: #2A8C0F;
+    border-radius: 50px;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+.mbtn1:hover{
+    background-color: #1e630b;
+}
+
+.mbtn2{
+    height: 50px;
+    width: 25%;
+    outline: none;
+    background-color: white;
+    color: #2A8C0F;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.mbtn2:hover{
+    background-color: #2A8C0F;
+    border: none;
+    color: white;
+}
+
+/* TODO MEDIAS DEL MAIN */
+
+@media(max-width: 1400px){
+    .main h1{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 700px){
+    .main h1{
+        font-size: 35px;
+    }
+}
+
+    /* estilos de banner de promo */
+
+    .BanerOfertas{
+    margin-top: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/imagenes/banner-foto-manzanas-verdes.jpg) no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    }
+
+    .marginBnnerPromo{
+        padding: 150px 10px;
+    }
+
+    .BanerOfertas h2 {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .BanerOfertas p{
+        font-size: 18px;
+        color: white;
+    }
+
+    #centrar-main{
+        margin-top: 80px;
+    }
+
+    /* TODO MEDIAS DE LAS PROMOS */
+
+@media(max-width: 700px){
+
+    
+    .BanerOfertas h2 {
+        font-size: 25px;
+    }
+
+    .BanerOfertas p{
+        font-size: 16px;
+    }
+}
+
+    /* ESTILOS DE MAS DE NOSOSTROS */
+
+    .MasDeNossotros{
+        margin-top: 20px;
+        background-color: #2A8C0F;
+    }
+
+    .line2{
+        height: 6px;
+    width: 30%;
+    background: white;
+    display: inline-block;
+    }
+
+    .MasDeNossotros h3{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .MasDeNossotros .card{
+        border: none;
+        cursor: pointer;
+    }
+
+    .MasDeNossotros i{
+        font-size: 45px;
+        color: #e65609;
+    }
+
+    .MasDeNossotros h4{
+        font-weight: lighter;
+        padding: 10px 10px;
+    }
+
+    /* estilos de la seccion de productos recientes */
+
+    .productos h3 {
+        font-size: 3rem;
+        color: #e65609;
+        font-weight: bold;
+    }
+    
+    .productos p:nth-child(1){
+        font-size: 18px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+    }
+    
+    .productos p{
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+    }
+
+    .productos .card{
+        border: none;
+        cursor: pointer;
+    }
+
+    .productos .card-body{
+        border: 1px dashed rgb(201, 199, 199);
+    }
+
+    .head1{
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .per1{
+        color: rgb(168, 162, 162);
+    }
+
+    .btnc{
+        height: 50px;
+        width: 50%;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: #2A8C0F;
+        border-radius: 50px;
+        margin: 0 auto;
+        display: block;
+        transition: all 0.4s;
+    }
+
+    .btnc:hover{
+        color: #e65609;
+        outline: none;
+        border: 1px solid #2A8C0F;
+        background: transparent;
+        border-radius: 50px;
+    }
+
+    .mbtn3{
+        height: 50px;
+        width: 25%;
+        outline: none;
+        border: none;
+        color: white;
+        background: #e65609;
+        border-radius: 50px;
+        transition: all 0.4s;
+    }
+    
+    .mbtn3:hover{
+        background-color: #b35523;
+    }
+
+    .mbtn3 a{
+        text-decoration: none;
+        color: white;
+    }
+
+    /* AQUI VAN LOS ESTILOS DE FORMAS DE PAGO Y DELIVERY */
+
+    .pago{
+        background-color: #2A8C0F;
+    }
+
+    .pago i{
+        font-size: 60px;
+        color: #e65609;
+    }
+
+    .pago .card{
+        border: none;
+        cursor: pointer;
+    }
+
+    /* ESTILOS DE FRUTAS */
+
+    .mainFrutas{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/imagenes/frutas-canasto.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    /* ESTILOS DE VERDURAS */
+
+    .mainVerduas{
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/imagenes/verduras-mostrador.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        /* ESTILOS DE PROMOCINES */
+
+    .mainpPromos{
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/imagenes/ofertas-frutas-y-verduras.jpg);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        /* ESTILOS DE CONTACTO */
+
+    .mainContacto{
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../multimedia/imagenes/campo-de-ciembra.jpg);
+        background-size: cover;
+        height: auto;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+        .marginContacto{
+            padding: 100px 0;
+        }
+
+        .redesContacto{
+            margin-top: 50px !important;
+        }
+
+        .redesContacto{
+            margin-top: 100px;
+        }
+
+        .redesContacto h3{
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e65609;
+        }
+    
+        .redesContacto .card{
+            border: none;
+            cursor: pointer;
+        }
+    
+        .redesContacto i{
+            font-size: 45px;
+            color: #e65609;
+        }
+    
+        .redesContacto h4{
+            font-weight: bold;
+            padding: 10px 10px;
+        }
+
+        .redesContacto .container i{
+            color: #2A8C0F
+        }
+
+        .ubicacionTitulo{
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e65609;
+        }
+
+        .formularioTitulo{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e65609;
+        }
+
+        .marginFormulario{
+            margin: 100px 0px;
+        }
+
+    /* ESTILOS OTROS PRODUCTOS */
+    
+    .otrosProductos h1{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .otrosProductos .card{
+        border: none;
+    }
+
+    /* ESTILOS DE formulario */
+
+    .botonForm{
+        height: 50px;
+        width: 25%;
+        outline: none;
+        background-color: #2A8C0F;
+        color: #ffffff;
+        border: none;
+        border-radius: 50px;
+        transition: all 0.4s;
+    }
+    
+    .botonForm:hover{
+        background-color: #ffffff;
+        border: 1px solid #2A8C0F;
+        color: #2A8C0F;
+    }
+
+    /* ESTILOS DE SECCIONDE MISION Y VISON */
+
+    .seccionNosotros{
+        margin: 60px 0 100px 0;
+    }
+
+    .seccionNosotros h2{
+        font-size: 3rem;
+        color: #e65609;
+        font-weight: bold;
+    }
+    .tituloMisionVision{
+        font-size: 20px;
+    }
+
+    /* ESTILOS DE MAPA DE SITIO */
+
+    .espaciado{
+        line-height: 40px;
+    }

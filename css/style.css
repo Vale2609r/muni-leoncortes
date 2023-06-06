@@ -1,0 +1,673 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+.line{
+  height: 6px;
+  width: 30%;
+  background: #5FBDB4;
+  display: inline-block;
+}
+nav .men-bg{
+  color:aqua;
+  background-color: black;
+}
+nav .men-bg{
+  background: transparent;
+  height: 90px;
+}
+.nav-item {
+  justify-content: space-around;
+  margin: 0px 0px 5px 0px;
+  font-size: 20px;
+}
+nav .mb-02{
+  text-align: center;
+}
+.totop {
+  background: #86b561;
+  position: fixed;
+  bottom: 40px;
+  right:20px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
+  z-index: 100;
+}
+.totop.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
+  border-radius: 50%;
+}
+.totop.active :hover {
+  background: #86b561;
+}
+/* ESTILOS DEL MENU */
+.nav-item a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  transition: all 0.4s;
+  font-size: 15px;
+}
+.nav-item a:hover{
+  color:#3b948b;
+  border-color: #0d3b36;
+}
+.navbar-brand{
+  height: 50px;
+  width: 100px;
+}
+.search{
+  height: 45px;
+  outline: none;
+  border: 2px solid #379e93;
+  background-color: transparent;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+  box-shadow: none;
+}
+.btn1{
+  height: 45px;
+  outline: none;
+  border: none;
+  background-color: #5FBDB4;
+  color: white;
+  border-radius: 0px 20px 20px 0px;
+  transition: all 0.4s;
+}
+.btn1:hover{
+  background-color:#86b561;
+}
+.bi-search{
+  font-size: 30px;
+  color: #379e93;
+  cursor: pointer;
+  padding-top: 5px;
+  transition: all 0.4s;
+}
+.bi-search:hover{
+  color: #5FBDB4;
+}
+.navbar-toggler{
+  font-size: 20px;
+  border: none;
+}
+.navbar-toggler:focus{
+  outline: none;
+  box-shadow: none;
+}
+/* ESTILOS DEL carrusell */
+.carousel-item{
+  height: 100vh;
+  min-height: 300px;
+}
+.carousel-caption{
+  bottom: 220px;
+  z-index: 2;
+}
+.carousel-caption h5{
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.carousel-caption p{
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.carousel-inner::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/* fin de estilos carrusell */
+.MasDeNossotros{
+  margin-top: 20px;
+  background-color: #5FBDB4;
+}
+.line2{
+  height: 6px;
+width: 70%;
+background:  #86b561;
+display: inline-block;
+}
+.MasDeNossotros h3{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.MasDeNossotros .card{
+  border: none;
+  cursor: pointer;
+}
+.MasDeNossotros i{
+  font-size: 45px;
+  color: #86b561;
+}
+
+.MasDeNossotros h4{
+  font-weight: lighter;
+  padding: 10px 10px;
+}
+
+/* ESTILOS DEL cards 2 */
+.contenido{
+text-align: center;
+}
+
+.boton_verr_mas{
+  height: 60px;
+  width: 40%;
+  outline: none;
+  border: none;
+  color: white;
+  background: #379e93;
+  border-radius: 60px;
+  transition: all 0.4s;
+  font-size: 25px;
+  }
+
+  .boton_verr_mas:hover{
+    background-color: #86b561;
+    }
+/* ESTILOS Del banner destacados*/
+
+  .BannerDestacados{
+    margin-top: 20px;
+    background: linear-gradient(rgba(47, 135, 150, 0.801), rgba(90, 151, 61, 0.619)), url() no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 100%;
+    opacity: 3;}
+  .BannerDestacados h2 {
+    font-size: 3rem;
+    color: white;}
+  .BannerDestacados p{
+    font-size: 18px;
+    color: white;}
+  #centrar-main{
+    margin-top: 80px;}
+  .vermas1{
+    height: 60px;
+    width: 40%;
+    outline: none;
+    border: none;
+    color: white;
+    background: #379e93;
+    border-radius: 60px;
+    transition: all 0.4s;
+    font-size: 25px;}
+  .vermas1:hover{
+    background-color:  #86b561;}
+  /* TODO MEDIAS DE LAS PROMOS */
+  @media(max-width: 700px){
+  .BannerDestacados h2 {
+    font-size: 25px;}
+  .BannerDestacados p{
+    font-size: 16px;
+  }
+  }
+  /* ESTILOS card-3*/
+.container-1{
+    width: 100%;
+    display: flex;
+}
+.card-3{
+  width: 90%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px  rgba(0, 0, 0, 0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.card-3:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+.card-3 .contenido{
+padding: 15px;
+text-align: center;
+}
+.card-3 .contenido p{
+  line-height: 1.5;
+  margin-bottom: 10px;
+  }
+.card-3 img{
+  width: 100%;
+  height: 210px;
+}
+.imagen-casa-sueños{
+  background: linear-gradient(rgba(47, 135, 150, 0.801), rgba(90, 151, 61, 0.619)) ,url(../multimedia/img/sesiones_2.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  opacity: 3;
+}
+.imagen-casa-sueños .btn{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: #3b948b;
+}
+.contenido-casa-sueños{
+  flex: 0 0 95%;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.contenido-casa-sueños p , h5{
+  text-align: center;
+  font-size: 3rem;
+}
+.BanerOfertas{
+  background: linear-gradient(rgba(40, 114, 127, 0.548), rgba(89, 151, 61, 0.466)), url(../multimedia/img/sesiones_4.jpg) no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 100%;
+  }
+  .BanerOfertas h2 {
+      font-size: 3rem;
+      margin: 100px;
+      color: white;
+  }
+  .BanerOfertas p:nth-child(1){
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+  }
+  .BanerOfertas p{
+      font-size: 18px;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+  }
+ /* acerca Nuestro canton*/
+ .section-padding{
+  padding: 100px auto;
+  bottom: 100px;
+}
+.cards-img{
+  width: 500px;
+  text-align: left;
+}
+.card-text{
+font-weight: 400;
+font-size: 25px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.BanerNuuestrocanton{
+  background: linear-gradient(rgba(47, 135, 150, 0.801), rgba(90, 151, 61, 0.619)), url() no-repeat;
+  background-size: cover;
+  height: 60vh;
+  width: 100%;
+  }
+  .BanerNuuestrocanton h2 {
+      font-size: 3rem;
+      margin:20%;
+      color: white;
+  }
+  .img-fluid{
+    width: 400px;
+    height: 100px;
+    text-align: center;
+  }
+  .misi-visi-nuestroC {
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    font-size: 25px;
+  }
+  .misi-visi-nuestroC p{
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    font-size: 25px;
+  }
+  .misi-visi-nuestroC h3{
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    font-size: 25px;
+    margin-left: 25px;
+  }
+  .img-districtos{
+    width:395px;
+    height: 300px;
+    margin-top: 80px;
+  }
+  .divi-canton
+  {
+    color: rgb(132, 130, 130);
+  }
+  .misi-visi-posicion p{
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    font-size: 25px;
+    margin-left:180px;
+  }
+  .container .img .escudo{
+    width:50px;
+    height: 30px;
+  }
+  /* acerca de nuestra alcaldia*/
+.img-alcaldia{
+    width:500px;
+    height: 300px;
+    margin-top: 80px;
+  }
+  .card-4{
+    width: 50%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px  rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .card-4:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4%);
+  }
+  .BannerAlcaldia{
+    margin-top: 20px;
+    background: linear-gradient(rgba(36, 130, 146, 0.801), rgba(90, 151, 61, 0.619)), url() no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    opacity: 3;
+    }
+    .BannerAlcaldia h2 {
+        font-size: 3rem;
+        color: white;
+    }
+    .BannerAlcaldia p{
+        font-size: 18px;
+        color: white;
+    }
+   /* acerca de nuestro consejo Municipal*/
+  .BannerConsejomuni{
+    margin-top: 20px;
+    background: linear-gradient(rgba(36, 130, 146, 0.801), rgba(90, 151, 61, 0.619)), url() no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    opacity: 3;
+    }
+    .BannerConsejomuni h2 {
+        font-size: 3rem;
+        color: white;
+        margin: 90px;
+    }
+    .card-text h4{
+      color: rgba(36, 130, 146, 0.801);
+  }
+  .accordion-button:not(.collapsed) {
+    color: #212529;
+    background-color: #5fbdb4b6; }
+   /* documentos*/
+    .MasDeDocumentos{
+      margin-top: 20px;
+      background-color: #ffffff;
+    }
+    .MasDeDocumentos h3{
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .MasDeDocumentos .card{
+      border-radius: 70px;
+      border-color: #379e93;
+      cursor: pointer;
+    }
+    .MasDeNossotros i{
+      font-size: 45px;
+      color: #86b561;
+      text-align: center;
+    }
+    .MasDeNossotros i:hover{
+      font-size: 45px;
+      color: #379e93;
+      text-align: center;
+    }
+    .MasDeDocumentos h4{
+      font-weight: lighter;
+      padding: 10px 10px;
+    }
+    .iconosdocumentos i{
+      font-size: 30px;
+      color: #86b561;
+      text-align: center;
+    }
+    .iconosdocumentos i:hover{
+      font-size: 30px;
+      color: #379e93;
+      text-align: center;
+    }
+    .dropdown-item.active, .dropdown-item:active {
+      color: var(--bs-dropdown-link-active-color);
+      text-decoration: none;
+      background-color: #e0efed;
+  }
+  .BannerConsejomuni{
+    margin-top: 20px;
+    background: linear-gradient(rgba(36, 130, 146, 0.801), rgba(90, 151, 61, 0.619)), url() no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    opacity: 3;
+    }
+.dropdown-menu-dark {
+  --bs-dropdown-color: #1a6abad6;
+  --bs-dropdown-bg: #379e93;
+  --bs-dropdown-link-active-color: #000;
+}
+.dropdown-menu-dark :hover{
+  background-color: #e0efed;
+  color: #000;
+}
+.dropdown-item {
+  color: #000000;
+}
+.btn-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #5fbdb4;
+  --bs-btn-border-color: #5fbdb4;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #379e93;
+  --bs-btn-active-bg: #86b561;
+  --bs-btn-active-border-color: #51585e;
+}
+  /* acerca de noticias*/
+  .BannerDoc{
+    margin-top: 20px;
+    background: linear-gradient(rgba(36, 130, 146, 0.801), rgba(90, 151, 61, 0.619)), url() no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    opacity: 3;
+    }
+    .BannerDoc h2{
+      font-size: 3rem;
+      color: white;
+      margin: 90px;
+  }
+  .BannerNoti{
+    margin-top: 0px;
+    background: #fff;
+    background-size: cover;
+    height: 85vh;
+    width: 100%;
+    opacity: 3;
+    }
+    section .container{
+      text-align: center;
+    }
+    section .h1{
+      font-size: 60px;
+      text-align: center; 
+    }
+    section .p{
+      font-size: 60px;
+      text-align: center; 
+    }
+    section .h2{
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 15px;
+    }
+    section .cards-Noti{
+      display: flex;
+      font-size: 25px;
+    }
+    .BannerNoti-2{
+      margin-top: 0px;
+      background: #379e93;
+      background-size: cover;
+      height: 85vh;
+      width: 100%;
+      opacity: 3;
+      }
+      .BannerNoti-3{
+        margin-top: 0px;
+        background: #fff;
+        background-size: cover;
+        height: 85vh;
+        width: 100%;
+        opacity: 3;
+        }
+        section .cards-Noti .text-card{
+          background: #379e93;
+          margin: 5px;
+          
+        }
+        section .cards-Noti .text-card{
+          background: #379e93;
+          margin: 5px;
+          
+        }
+        section .cards-Noti .text-noti-card{
+          background: #ffffff;
+          margin: 5px;
+          
+        }
+        section .cards-Noti .text-card h3{
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+          
+        }
+        @media(max-width: 900px){
+          section h1{
+            font-size: 40px;
+          }
+          section .cards-Noti{
+            flex-direction: column;
+            font-size: 15px;
+          }
+        }
+        .reveal{
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 2s ease;
+        }
+        .reveal.active{
+          transform: translateY(0px);
+          opacity: 1;
+          }
+
+
+          .boton_transparencia{
+            height: 30px;
+            width: 20%;
+            outline: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            background: white;
+            border-radius: 60px;
+            transition: all 0.4s;
+            font-size: 15px;
+            text-align: center;
+            }
+            .boton_transparencia:hover{
+              background-color: #86b561;
+              }
+              .iconos-estad{
+                margin: 20px;
+                font-size: 100px;
+                color: #000;
+              }
+              .iconos-estad:hover{
+                margin: 20px;
+                font-size: 100px;
+                color: #3b948b;
+
+              }
+              .text-estadisticas{
+                color: red;
+                font-size: 50px;
+              }
+
+              .text-titulos{
+                color:  #86b561;
+                font-size: 50px;
+                margin: 30px;
+                padding: 20px;
+              }
+              .text-titulos:hover{
+                color:  #3b948b;
+                font-size: 50px;
+                margin: 30px;
+                padding: 20px;
+              }
+
+              .iconos-reco{
+                margin: 20px;
+                font-size: 50px;
+                color: #000;
+              }
+              .iconos-reco:hover{
+                margin: 20px;
+                font-size: 50px;
+                color: #3b948b;
+
+              }
+
+              /* acerca de horarios de atencion*/
+
+              .horari{
+                margin: 20px;
+                font-size: 20px;
+                color: #020303;
+
+              }
+              .horari:hover{
+                margin: 20px;
+                font-size: 20px;
+                color: #020303;
+                background-color: #379e93;
+              }
